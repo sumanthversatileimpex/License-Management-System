@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/images/ITL Logo.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+<body>
+        <div class="container">
+            <h1>License Management System</h1>
+            <p class="welcome">Welcome! Upload your PDF files, and you can save, view, and delete them easily.</p>
+            
+            <form id="file-form">
+                <div class="file-container">
+                    <label for="file-input" class="file-label">Choose File</label>
+                    <input type="file" id="file-input" accept=".pdf" hidden>
+                    <span id="file-name" class="file-name">No file chosen</span>
+                </div>
+                <div class="form-group">
+                    <label for="city-input" class="city-label">Location :</label>
+                    <input type="text" id="city-input" class="city-input" placeholder="Location">
+                </div>
+                <button id="save-button">Upload File</button>
+            </form>
+            
+            <div class="table-wrapper">
+                <table id="file-table">
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Location</th>
+                            <th>PDF View</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="file-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="toast-container"></div>
+        <script src="script.js"></script>
+</body>
+</html>
